@@ -4,7 +4,9 @@ import MedalItem from "./components/MedalItem";
 import MedalForm from "./components/MedalForm";
 
 function App() {
-  const [grades, setGrades] = useState([]);
+  const local = JSON.parse(localStorage.getItem("grades")) || [];
+
+  const [grades, setGrades] = useState(local);
   const [country, setCountry] = useState("");
   const [gold, setGold] = useState(0);
   const [silver, setSilver] = useState(0);
@@ -30,6 +32,8 @@ function App() {
       const sortedGrade = [...grades, newGrade].sort((a, b) => b.gold - a.gold);
       setGrades(sortedGrade);
 
+      localStorage.setItem("grades", JSON.stringify(sortedGrade));
+
       //입력 후 인풋 필드 초기화
       setCountry("");
       setGold(0);
@@ -43,6 +47,8 @@ function App() {
       return grade.country !== country;
     });
     setGrades(deletedGrade);
+    localStorage.setItem("grades", JSON.stringify(deletedGrade));
+
     alert("삭제되었습니다!");
   };
 
@@ -77,6 +83,7 @@ function App() {
     const sortedGrade = updatedGrade.sort((a, b) => b.gold - a.gold);
 
     setGrades(sortedGrade);
+    localStorage.setItem("grades", JSON.stringify(sortedGrade));
 
     //인풋 필드 초기화
     setCountry("");
@@ -85,7 +92,7 @@ function App() {
     setBronze(0);
   };
 
-  const MedalChangeHandler = (e, medal) => {  
+  const MedalChangeHandler = (e, medal) => {
     const value = e.target.value;
 
     //0~99사이의 숫자만 입력할 수 있게 하기
