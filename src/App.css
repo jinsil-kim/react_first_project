@@ -1,0 +1,154 @@
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.container{
+  max-width: 1100px;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  padding: 20px;
+  margin: 20px auto;
+}
+
+h1 {
+  font-size: 3em;
+  color: #050c9c;
+}
+
+form{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+label{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+}
+
+input{
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.medal-divs {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.medal-labels{
+  display: flex;
+  flex-direction: column;
+}
+
+.btns{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+button {
+  gap: 10px;
+  border-radius: 5px;
+  border: transparent;
+  font-size: 1em;
+  font-weight: 500;
+  background-color: #ffe600;
+  cursor: pointer;
+  padding: 8px 20px;
+}
+
+button:hover {
+  background-color: #ffef08;
+}
+
+.deleteBotton{
+  background-color: #ff1010;
+  color: white;
+}
+
+.deleteBotton:hover{
+  background-color: #ff3737;
+}
+
+
+p{
+  margin-left: 40px;
+}
+
+table{
+  width: 100%;
+  background-color:#e8e9ff;
+  border-collapse: collapse;
+  overflow: hidden;
+  margin-top: 40px;
+  border-radius: 5px;
+}
+
+th{
+  background-color:#003366;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+td{
+  align-items: center;
+  color: #333;
+  padding: 10px;
+  text-align: justify;
+  word-break: break-word;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+}
