@@ -70,9 +70,9 @@ function App() {
       if (grade.country === country) {
         return {
           country: country,
-          gold: gold,
-          silver: silver,
-          bronze: bronze,
+          gold: Number(gold),
+          silver: Number(silver),
+          bronze: Number(bronze),
         };
       } else {
         return grade;
@@ -99,9 +99,9 @@ function App() {
     if (value < 0 || value > 99) {
       alert("0이상 100미만의 숫자만 입력해주세요!");
     } else {
-      if (medal === "금메달") setGold(value);
-      else if (medal === "은메달") setSilver(value);
-      else if (medal === "동메달") setBronze(value);
+      if (medal === "금메달") setGold(Number(value));
+      else if (medal === "은메달") setSilver(Number(value));
+      else if (medal === "동메달") setBronze(Number(value));
     }
   };
 

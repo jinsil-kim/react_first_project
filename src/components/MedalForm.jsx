@@ -30,7 +30,8 @@ function MedalForm({
       <div className="medal-divs">
         {inputMedalNames.map((medal) => {
           return (
-            <div className="medal-labels" key={medal}>
+            <div className="medal-labels" key={Math.random()}>
+               {/*메달 인풋값에 숫자 입력할때 0이 사라지는 매직 Math.random() */}
               <label htmlFor="medal">{medal}</label>
               <input
                 type="number"

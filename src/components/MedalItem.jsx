@@ -15,9 +15,9 @@ const MedalItem = ({deleteBtn, grades}) => {
             </tr>
           </thead>
           <tbody>
-            {grades.map((grade, index) => {
+            {grades.map((grade, country) => {
               return (
-                <MedalList key={index} grade={grade} deleteBtn={deleteBtn} />
+                <MedalList key={country} grade={grade} deleteBtn={deleteBtn} />
               );
             })}
           </tbody>
